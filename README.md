@@ -14,13 +14,22 @@ The solution includes only the markup and corresponding CSS styles.
 * Configure GitHub Pages and add a link to the Live Page in the GitHub repository header.
 * The solution must meet the mentor's acceptance criteria.
 
-## Solution
+### Module objectives
 
-Following is a part of the solution to the task:
-* This repository, based on previous one ([goit-markup-hw-02](https://github.com/oleksandr-romashko/goit-markup-hw-02)).
-* HTML markup of the page layouts in [index.html](./index.html) and [portfolio.html](./portfolio.html) files, including images in the `images` folder.
-* All CSS styles in a single file [styles.css](./css/index.html).
-* HTML markup is monitored by [Prettier plugin](https://prettier.io/) for VS Code. Its settings are located in the `.prettierrc` configuration file.
+* Understand what a block model is and what it is used for.
+* Learn how to configure element geometry.
+* Understand how the spacing (margins and padding) of different elements interact.
+* Learn about the basic concepts of Flexbox technology.
+* Learn how to configure the properties of the flex container and flex elements.
+* Configure individual elements using the `:first-child`, `:last-child`, `:not()` and `:nth-child(an + b)` pseudo-classes.
+
+## Task
+
+* Create a repository `goit-markup-hw-03`.
+* Clone the already created repository (`goit-markup-hw-03`) and copy files of the previous work to it (from `goit-markup-hw-02`).
+* Add styles for elements geometry (width, padding, margins, and borders) and content positioning with Flexbox for layout pages of [Homework #3](https://www.figma.com/file/Kr5Q4EVrEAqpOWko4QeEJb/Web-Studio-(Version-4.0)?type=design&node-id=296708-626&t=xehgKGCXNQoohzws-0).
+* Configure GitHub Pages and add a link to the Live Page in the GitHub repository header.
+* The solution must meet the mentor's acceptance criteria.
 
 ## Useful information and insights
 
