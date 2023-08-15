@@ -1,79 +1,73 @@
-# Box Model and Flexbox
+# Decorative effects and Animation
 
 ## About
 
-This is the homework solution for the Box Model and Flexbox topics, based on the task below.
+This is the homework solution for the Decorative effects and Animation topics, based on the task below.
+
+This homework covers following topics:
+* background images
+* vector graphics
+* pseudo-elements
+* positioning and animation
 
 The solution includes only the markup and corresponding CSS styles.
 
-## Task
-
-* Create a repository `goit-markup-hw-03`.
-* Clone the already created repository (`goit-markup-hw-03`) and copy files of the previous work to it (from `goit-markup-hw-02`).
-* Add styles for elements shape (width, padding, margins, and borders) and content positioning with Flexbox for layout pages of [Homework #3](https://www.figma.com/file/Kr5Q4EVrEAqpOWko4QeEJb/Web-Studio-(Version-4.0)?type=design&node-id=296708-626&t=xehgKGCXNQoohzws-0).
-* Configure GitHub Pages and add a link to the Live Page in the GitHub repository header.
-* The solution must meet the mentor's acceptance criteria.
+The provided JS script manages the opening and closing of the modal window (described in details in the [Useful information and insights section below](#useful-information-and-insights)).
 
 ### Module objectives
 
-* Understand what a block model is and what it is used for.
-* Learn how to configure element geometry.
-* Understand how the spacing (margins and padding) of different elements interact.
-* Learn about the basic concepts of Flexbox technology.
-* Learn how to configure the properties of the flex container and flex elements.
-* Configure individual elements using the `:first-child`, `:last-child`, `:not()` and `:nth-child(an + b)` pseudo-classes.
+* To learn basic properties for setting background, gradient and shadows.
+* To create decorative effects (background, shadow, etc.) on the page.
+* To distinguish between SVG and SVG-sprites and be able to dynamically change their characteristics.
+* To apply pseudo-elements.
+* To learn the main types of positioning and be able to determine the depth (order) of positioned elements on the page.
+* To learn how to set simple transition scenarios for CSS properties.
+* To analyze the necessity and advantages of using CSS animations over CSS transitions.
+* To create a perspective for individual or a group of elements.
 
 ## Task
 
-* Create a repository `goit-markup-hw-03`.
-* Clone the already created repository (`goit-markup-hw-03`) and copy files of the previous work to it (from `goit-markup-hw-02`).
-* Add styles for elements geometry (width, padding, margins, and borders) and content positioning with Flexbox for layout pages of [Homework #3](https://www.figma.com/file/Kr5Q4EVrEAqpOWko4QeEJb/Web-Studio-(Version-4.0)?type=design&node-id=296708-626&t=xehgKGCXNQoohzws-0).
-* Configure GitHub Pages and add a link to the Live Page in the GitHub repository header.
+* Add markup, icons styles and decorative effects to the pages as indicated on the [Homework #4 layout](https://www.figma.com/file/Kr5Q4EVrEAqpOWko4QeEJb/Web-Studio-(Version-4.0)?type=design&node-id=297016-823&t=xehgKGCXNQoohzws-0).
+* To generate an SVG sprite, use the [Icomoon service](https://icomoon.io/).
+* To optimize the created SVG sprite, use [SVGOMG service](https://jakearchibald.github.io/svgomg/).
+* Set up GitHub Pages and add a live page to the header of the GitHub repository.
 * The solution must meet the mentor's acceptance criteria.
 
 ## Useful information and insights
 
-* Use a container for section content
-
-  Add the following properties with corresponding values for the `.container` class to the CSS file:
-
-  ```
-    .container { 
-      max-width: 
-      padding-left:  
-      padding-right:  
-      margin-left:  
-      margin-right:  
-  }
-  ```
-
-  In an HTML document, wrap content inside each section, as well as the header and footer in a `div`` with the container class.
-* Connect modern-normalize (to normalize browsers' default style) using the [link](https://airlock-on-edge.woolf.university/?url=https%3A%2F%2Fcdnjs.com%2Flibraries%2Fmodern-normalize&resourceId=9168ce8c-eb19-4f64-8957-5261bac864ee&studentId=d22df0d2-a53a-49c8-bf11-bc01ca37c314&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc1ZlcmlmaWVkIjp0cnVlLCJvcmciOnsiaWQiOiIyODU2YWNkMy1jMWUxLTQyMWMtOTg5ZS1jN2RkYmQzMmIyZjIiLCJncm91cHMiOltdfSwia2luZCI6Im9hdXRoIiwic2NvcGUiOiIqIiwiaXNzIjoidXJuOldvb2xmVW5pdmVyc2l0eTpzZXJ2ZXIvc2VydmljZS9hY2Nlc3MiLCJpZCI6ImQyMmRmMGQyLWE1M2EtNDljOC1iZjExLWJjMDFjYTM3YzMxNCIsImlhdCI6MTY5MjAwNDMxNX0.Gn3pEpWfSHgyGSwOSpsVzUwPeKx1pZVzeK8W9yFr7hk) (use "Copy Link Tag" button).
-    
-  Link it before project `styles.css` file.
-* Use "Visually Hidden" pattern to hide headers. 
+* Sprites with all icons are created using [IcoMoon service](https://icomoon.io/).
+* Sprites are optimized using [SVGOMG service](https://jakearchibald.github.io/svgomg/).
+* Transitions may tuned up using [cubic-bezier()](https://cubic-bezier.com/) service.
+* <details>
+  <summary>The modal window is configured using the provided JS script</summary>
   
-  Add the following properties for the `.visually-hidden` class to the CSS file:
+  Initially, the modal window and the backdrop are hidden using the `is-hidden` class on the backdrop, whose selector uses the `visibility`, `opacity`, and `pointer-events` properties. 
+  If the `is-hidden` class is removed from the backdrop, the backdrop and a modal window appear.
+  The appearance and hiding of the modal window is animated using a transition with an arbitrary effect, such as `scale` or `translate`, and `opacity`.
+
+  The script for the modal window is placed in the `js/modal.js` file and is connected using `<script src="./js/modal.js"></script>` tag placed before the closing `body` tag:
 
   ```
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-  ```
-* Set the width / flex-basis of list elements in sections using the `calc()` function:
-  ```
-    <!-- (the width of the parent element - sum of gaps between elements) / the number of elements in the row -->
+  (() => {
+    const refs = {
+      openModalBtn: document.querySelector("[data-modal-open]"),
+      closeModalBtn: document.querySelector("[data-modal-close]"),
+      modal: document.querySelector("[data-modal]"),
+    };
     
-    .benefits-list-item {
-      width: calc((100% - 3 * 24px) / 4);
+    refs.openModalBtn.addEventListener("click", toggleModal);
+    refs.closeModalBtn.addEventListener("click", toggleModal);
+
+    function toggleModal() {
+      refs.modal.classList.toggle("is-hidden");
     }
+  })();
   ```
+
+  In order for the script to work, it is necessary to add special attributes to the markup, by which the script searches for elements, as well as the `is-hidden` class for the backdrop:
+  * For the modal window opening button, add the `data-modal-open` attribute. 
+  * For the modal window closing button, add the `data-modal-close` attribute. 
+  * For the modal window backdrop, add the `data-modal` attribute
+
+  Modal window should open when clicked on the `Order Service` button.
+  </details>
