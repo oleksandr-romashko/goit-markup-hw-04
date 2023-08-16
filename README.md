@@ -37,6 +37,7 @@ The provided JS script manages the opening and closing of the modal window (desc
 
 * Sprites with all icons are created using [IcoMoon service](https://icomoon.io/).
 * Sprites are optimized using [SVGOMG service](https://jakearchibald.github.io/svgomg/).
+* Tool to unminify optimisez icons [unminify](https://unminify.com/)
 * Transitions may tuned up using [cubic-bezier()](https://cubic-bezier.com/) service.
 * <details>
   <summary>The modal window is configured using the provided JS script</summary>
