@@ -39,6 +39,7 @@ The provided JS script manages the opening and closing of the modal window (desc
 * Sprites are optimized using [SVGOMG service](https://jakearchibald.github.io/svgomg/).
 * Tool to unminify optimisez icons [unminify](https://unminify.com/)
 * Transitions may tuned up using [cubic-bezier()](https://cubic-bezier.com/) service.
+* [List of properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties) that can be animated.
 * <details>
   <summary>The modal window is configured using the provided JS script</summary>
   
