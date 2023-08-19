@@ -48,6 +48,10 @@
   --menu-item-text-weight: 500;
   --btn-text-weight: 500;
   --main-text-weight: 400;
+
+  /*---  TRANSITION PROPERTIES  --*/
+
+  --transition-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*=============================================
@@ -241,15 +245,71 @@ body {
   margin-right: 40px;
 }
 
+/* 
+ * Default styles for menu-item-link and its ::after pseudo class,
+ * so later it is necessary to change only color and background-color
+ * using CSS cascade.
+ */
 .menu-item-link {
+  position: relative;
+  display: block;
+  width: max-content;
   font-size: var(--menu-item-text-size);
   font-weight: var(--menu-item-text-weight);
   color: var(--menu-item-color);
+  transition: color var(--transition-dur-and-func);
 }
 
-.menu-item-link:hover,
-.menu-item-link:focus {
+.menu-item-link::after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-top: 20px;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: transparent;
+  content: "";
+  transition: background-color var(--transition-dur-and-func);
+}
+
+/* 
+ * "isCurrentPage" class flags which menu-item-link element 
+ * to highlight as a Current Page element,
+ * when menu-items is not hovered or focused
+ */
+.menu .isCurrentPage {
   color: var(--active-element-color);
+}
+
+.menu .isCurrentPage::after {
+  background-color: var(--active-element-color);
+}
+
+/* 
+ * Resets Current Page class styles 
+ * when header menu is hovered 
+ * (disables effects of "isCurrentPage" flag)
+ */
+.menu:hover .isCurrentPage {
+  color: var(--menu-item-color);
+}
+
+.menu:hover .isCurrentPage::after {
+  background-color: transparent;
+}
+
+/* 
+ * Sets hover styles for menu-item-link 
+ */
+.menu .menu-item-link:hover,
+.menu-item .menu-item-link:focus {
+  color: var(--active-element-color);
+}
+
+.menu-item:hover .menu-item-link::after {
+  background-color: var(--active-element-color);
 }
 
 /*----------  CONTACTS  ------*/
@@ -270,6 +330,7 @@ body {
 
 .contact {
   color: var(--primary-color-black);
+  transition: color var(--transition-dur-and-func);
 }
 
 .contact:hover,
@@ -284,7 +345,7 @@ body {
 /*--------  HEADER LINE  -----*/
 
 .page-header {
-  border-bottom: 1px solid var(--primary-accent-color);
+  box-shadow: inset 0px -1px 0px 0px var(--primary-accent-color);
 }
 
 /*=============================================
