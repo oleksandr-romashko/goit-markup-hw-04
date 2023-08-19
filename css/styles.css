@@ -19,6 +19,8 @@
   --primary-accent-color: #e7e9fc;
   /* CLOUD - Light - on design layout color */
   --secondary-accent-color: #f4f4fd;
+  /* GREEN - on design layout color */
+  --tertiary-accent-color: #31d0aa;
   /* OCEAN - Pressed state - on design layout color */
   --active-element-color: #404bbf;
 
@@ -165,6 +167,27 @@ body {
   color: var(--secondary-color-white);
 }
 
+/*---  SOCIAL - MEDIA LINKS  ---*/
+
+.social-media-contacts-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-media-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--brand-color);
+}
+
+.social-contact-icon {
+  fill: var(--secondary-accent-color);
+}
+
 /*-  VISUALLY HIDDEN PATERN  -*/
 
 .visually-hidden {
@@ -274,6 +297,12 @@ body {
   background-color: var(--title-color);
 }
 
+.page-footer .container {
+  display: flex;
+  column-gap: 120px;
+  flex-wrap: wrap;
+}
+
 .page-footer .logotype {
   display: inline-block;
   margin-bottom: 16px;
@@ -283,9 +312,26 @@ body {
   color: var(--secondary-accent-color);
 }
 
-.page-footer .moto-text {
+.footer-moto-text {
   width: 264px;
   color: var(--secondary-accent-color);
+}
+
+.footer-social-media {
+  width: 208px;
+}
+
+.footer-social-media-title {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--secondary-color-white);
+}
+
+.page-footer .social-media-link:hover,
+.page-footer .social-media-link:focus {
+  background-color: var(--tertiary-accent-color);
 }
 
 /*=============================================
@@ -344,6 +390,11 @@ body {
   gap: 24px;
 }
 
+.benefit-icon {
+  display: block;
+  margin: 24px auto;
+}
+
 .benefits-list-item {
   width: calc((100% - 3 * 24px) / 4);
 }
@@ -393,13 +444,21 @@ body {
 }
 
 .team-member-card-content {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 32px 16px;
   text-align: center;
 }
 
 .team-member-name {
   margin-bottom: 8px;
+}
+
+.team-member-position {
+  margin-bottom: 8px;
+}
+
+.team .social-media-link:hover,
+.team .social-media-link:focus {
+  background-color: var(--active-element-color);
 }
 
 /*----------  PORTFOLIO  -------*/
