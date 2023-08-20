@@ -556,17 +556,13 @@ body {
 
 .client-link:hover,
 .client-link:focus {
+  color: var(--active-element-color);
   border-color: var(--active-element-color);
 }
 
 .client-icon {
   fill: currentColor;
   transition: fill var(--transition-duration) var(--transition-function);
-}
-
-.client-link:hover .client-icon,
-.client-link:focus .client-icon {
-  fill: var(--active-element-color);
 }
 
 /*=============================================
