@@ -428,7 +428,7 @@ body {
   transition: transform var(--transition-duration) var(--transition-function);
 }
 
-.close-btn {
+.modal-close-btn {
   position: absolute;
   top: 24px;
   right: 24px;
@@ -444,16 +444,16 @@ body {
   background-color: var(--primary-accent-color);
   transition: background-color var(--transition-duration)
       var(--transition-function),
-    border-color var(--transition-duration) var(--transition-function);
+    border var(--transition-duration) var(--transition-function);
 }
 
-.close-btn:hover,
-.close-btn:focus {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
   border: none;
   background-color: var(--active-element-color);
 }
 
-.close-btn-icon {
+.modal-close-btn-icon {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -462,8 +462,8 @@ body {
   transition: fill var(--transition-duration) var(--transition-function);
 }
 
-.close-btn:hover .close-btn-icon,
-.close-btn:focus .close-btn-icon {
+.modal-close-btn:hover .close-btn-icon,
+.modal-close-btn:focus .close-btn-icon {
   fill: var(--secondary-color-white);
 }
 
