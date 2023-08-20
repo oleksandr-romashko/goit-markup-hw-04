@@ -445,13 +445,20 @@ body {
   gap: 24px;
 }
 
+.benefits-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: calc((100% - 3 * 24px) / 4);
+  height: 112px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  background-color: var(--secondary-accent-color);
+}
+
 .benefit-icon {
   display: block;
   margin: 24px auto;
-}
-
-.benefits-list-item {
-  width: calc((100% - 3 * 24px) / 4);
 }
 
 .benefit-name {
