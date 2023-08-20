@@ -347,8 +347,11 @@ body {
 
 .page-footer .container {
   display: flex;
-  column-gap: 120px;
-  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.footer-logo-and-moto {
+  margin-right: 120px;
 }
 
 .page-footer .logotype {
