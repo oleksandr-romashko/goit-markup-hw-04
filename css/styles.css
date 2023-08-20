@@ -181,7 +181,6 @@ body {
 
 .social-media-contacts-list {
   display: flex;
-  justify-content: space-between;
 }
 
 .social-media-link {
@@ -370,6 +369,11 @@ body {
   width: 208px;
 }
 
+.page-footer .social-media-contacts-list {
+  justify-content: flex-start;
+  gap: 16px;
+}
+
 .footer-social-media-title {
   margin-bottom: 16px;
   font-size: 16px;
@@ -506,7 +510,7 @@ body {
 }
 
 .team-member-card-content {
-  padding: 32px 16px;
+  padding: 32px 0px;
   text-align: center;
 }
 
@@ -516,6 +520,11 @@ body {
 
 .team-member-position {
   margin-bottom: 8px;
+}
+
+.team-member-card .social-media-contacts-list {
+  justify-content: center;
+  gap: 24px;
 }
 
 .team-member-card .social-media-link:hover,
