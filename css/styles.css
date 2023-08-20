@@ -253,11 +253,6 @@ body {
   margin-right: 40px;
 }
 
-/* 
- * Default styles for menu-item-link and its ::after pseudo class,
- * so later it is necessary to change only color and background-color
- * using CSS cascade.
- */
 .menu-item-link {
   position: relative;
   display: block;
@@ -283,11 +278,6 @@ body {
     var(--transition-function);
 }
 
-/* 
- * "current" class flags which menu-item-link element 
- * to highlight as a Current Page element,
- * when menu-items is not hovered or focused
- */
 .menu .current {
   color: var(--active-element-color);
   transition: color var(--transition-duration) var(--transition-function);
@@ -299,29 +289,9 @@ body {
     var(--transition-function);
 }
 
-/* 
- * Resets Current Page class styles 
- * when header menu is hovered 
- * (disables effects of "current" flag)
- */
-.menu:hover .current {
-  color: var(--menu-item-color);
-}
-
-.menu:hover .current::after {
-  background-color: transparent;
-}
-
-/* 
- * Sets hover styles for menu-item-link 
- */
 .menu .menu-item-link:hover,
 .menu-item .menu-item-link:focus {
   color: var(--active-element-color);
-}
-
-.menu-item:hover .menu-item-link::after {
-  background-color: var(--active-element-color);
 }
 
 /*----------  CONTACTS  ------*/
