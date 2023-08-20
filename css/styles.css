@@ -219,6 +219,21 @@ body {
 =            HEADER                           =
 =============================================*/
 
+/* .page-header {
+  box-shadow: inset 0px -1px 0px 0px var(--primary-accent-color);
+} */
+
+.page-header {
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.page-header::after {
+  display: block;
+  border-bottom: 1px solid var(--primary-accent-color);
+  content: "";
+}
+
 .page-header-container {
   display: flex;
   align-items: center;
@@ -266,7 +281,7 @@ body {
 .menu-item-link::after {
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   margin-top: 20px;
   height: 4px;
@@ -313,21 +328,12 @@ body {
 .contact {
   color: var(--primary-color-black);
   transition: color var(--transition-duration) var(--transition-function);
+  white-space: nowrap;
 }
 
 .contact:hover,
 .contact:focus {
   color: var(--active-element-color);
-}
-
-.contact-phone-number {
-  white-space: nowrap;
-}
-
-/*--------  HEADER LINE  -----*/
-
-.page-header {
-  box-shadow: inset 0px -1px 0px 0px var(--primary-accent-color);
 }
 
 /*=============================================
