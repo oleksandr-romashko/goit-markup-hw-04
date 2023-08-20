@@ -686,7 +686,8 @@ body {
     background-color var(--transition-duration) var(--transition-function);
 }
 
-.close-btn:active {
+.close-btn:hover,
+.close-btn:focus {
   border-color: transparent;
   background-color: var(--active-element-color);
 }
