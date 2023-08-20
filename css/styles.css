@@ -278,16 +278,16 @@ body {
 }
 
 /* 
- * "isCurrentPage" class flags which menu-item-link element 
+ * "current" class flags which menu-item-link element 
  * to highlight as a Current Page element,
  * when menu-items is not hovered or focused
  */
-.menu .isCurrentPage {
+.menu .current {
   color: var(--active-element-color);
   transition: color var(--transition-dur-and-func);
 }
 
-.menu .isCurrentPage::after {
+.menu .current::after {
   background-color: var(--active-element-color);
   transition: background-color var(--transition-dur-and-func);
 }
@@ -295,13 +295,13 @@ body {
 /* 
  * Resets Current Page class styles 
  * when header menu is hovered 
- * (disables effects of "isCurrentPage" flag)
+ * (disables effects of "current" flag)
  */
-.menu:hover .isCurrentPage {
+.menu:hover .current {
   color: var(--menu-item-color);
 }
 
-.menu:hover .isCurrentPage::after {
+.menu:hover .current::after {
   background-color: transparent;
 }
 
