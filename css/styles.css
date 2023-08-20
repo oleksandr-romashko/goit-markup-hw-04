@@ -19,8 +19,10 @@
   --primary-accent-color: #e7e9fc;
   /* CLOUD - Light - on design layout color */
   --secondary-accent-color: #f4f4fd;
+  /* LIGHT SLATE - on design layout color */
+  --accent-color-grey: #8e8f99;
   /* GREEN - on design layout color */
-  --tertiary-accent-color: #31d0aa;
+  --accent-color-green: #31d0aa;
   /* OCEAN - Pressed state - on design layout color */
   --active-element-color: #404bbf;
 
@@ -392,7 +394,7 @@ body {
 
 .page-footer .social-media-link:hover,
 .page-footer .social-media-link:focus {
-  background-color: var(--tertiary-accent-color);
+  background-color: var(--accent-color-green);
 }
 
 /*=============================================
@@ -522,6 +524,55 @@ body {
 .team .social-media-link:focus {
   background-color: var(--active-element-color);
 }
+
+/*---------  CLIENTS  ----------*/
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+  column-gap: 24px;
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 88px;
+  border: 1px solid var(--accent-color-grey);
+  border-radius: 4px;
+  transition: fill var(--transition-dur-and-func),
+    border-color var(--transition-dur-and-func);
+}
+
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--active-element-color);
+}
+
+.client-icon {
+  fill: var(--accent-color-grey);
+  transition: fill var(--transition-dur-and-func);
+}
+
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+  fill: var(--active-element-color);
+}
+
+/* 
+.social-list-link {
+  display: flex; +
+  justify-content: center; +
+  align-items: center; +
+  width: 40px; +
+  height: 40px; +
+  border-radius: 10px; +
+  border: 1px solid rgba(17, 17, 17, 0.1); +
+  transition: border-color var(--transition-dur-and-func);
+}
+
+ */
 
 /*----------  PORTFOLIO  -------*/
 
