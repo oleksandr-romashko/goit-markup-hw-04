@@ -401,7 +401,7 @@ body {
 }
 
 /*=============================================
-=            MAIN CONTENT                     =
+=            MAIN PAGE CONTENT                =
 =============================================*/
 
 /*----------  HERO  ----------*/
@@ -563,12 +563,18 @@ body {
   fill: var(--active-element-color);
 }
 
+/*=============================================
+=            PORTFOLIO PAGE CONTENT           =
+=============================================*/
+
 /*----------  PORTFOLIO  -------*/
 
 .portfolio {
   padding-top: 96px;
   padding-bottom: 120px;
 }
+
+/*----------  FILTER  ----------*/
 
 .portfolio .filters-list {
   display: flex;
@@ -598,6 +604,8 @@ body {
     0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
+/*--------  PROJECT CARDS  ------*/
+
 .portfolio .projects-list {
   display: flex;
   flex-wrap: wrap;
@@ -621,4 +629,29 @@ body {
 
 .portfolio .project-category {
   color: var(--primary-color-black);
+}
+
+/*-------  CARD OVERLAY  -------*/
+
+.portfolio .project-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  padding: 32px 40px;
+  color: var(--secondary-accent-color);
+  background-color: var(--brand-color);
+  transition: transform var(--transition-dur-and-func);
+}
+
+.project-card-link:hover .overlay,
+.project-card-link:focus .overlay {
+  transform: translateY(0%);
 }
