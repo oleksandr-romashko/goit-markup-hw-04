@@ -542,6 +542,7 @@ body {
   height: 88px;
   border: 1px solid var(--accent-color-grey);
   border-radius: 4px;
+  outline-offset: 10px;
   transition: fill var(--transition-dur-and-func),
     border-color var(--transition-dur-and-func);
 }
