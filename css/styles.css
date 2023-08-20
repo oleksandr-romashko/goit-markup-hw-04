@@ -184,12 +184,17 @@ body {
   display: flex;
 }
 
+.social-media-contact-item {
+  width: 40px;
+  height: 40px;
+}
+
 .social-media-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background-color: var(--brand-color);
   transition: background-color var(--transition-duration)
@@ -365,21 +370,17 @@ body {
   color: var(--secondary-accent-color);
 }
 
-.footer-social-media {
-  width: 208px;
-}
-
-.page-footer .social-media-contacts-list {
-  justify-content: flex-start;
-  gap: 16px;
-}
-
 .footer-social-media-title {
   margin-bottom: 16px;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   color: var(--secondary-color-white);
+}
+
+.page-footer .social-media-contacts-list {
+  justify-content: flex-start;
+  gap: 16px;
 }
 
 .page-footer .social-media-link:hover,
@@ -613,15 +614,21 @@ body {
 .clients-list {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 24px;
+}
+
+.clients-list-item {
+  width: 168px;
+  height: 88px;
 }
 
 .client-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 168px;
-  height: 88px;
+  width: 100%;
+  height: 100%;
   border: 1px solid var(--accent-color-grey);
   border-radius: 4px;
   outline-offset: 10px;
