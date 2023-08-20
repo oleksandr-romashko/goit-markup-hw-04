@@ -26,7 +26,8 @@
   --accent-color-green: #31d0aa;
   /* OCEAN - Pressed state - on design layout color */
   --active-element-color: #404bbf;
-  /* Modal window */
+  /* Backdrop and Modal window */
+  --backdrop-color: rgba(46, 47, 66, 0.4);
   --modal-window-bg: #fcfcfc;
 
   /*---------  FONT STYLES  ------*/
@@ -218,10 +219,6 @@ body {
 =            HEADER                           =
 =============================================*/
 
-/* .page-header {
-  box-shadow: inset 0px -1px 0px 0px var(--primary-accent-color);
-} */
-
 .page-header {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -393,6 +390,82 @@ body {
 /*=============================================
 =            MAIN PAGE CONTENT                =
 =============================================*/
+
+/*---------  BACKDROP  ---------*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: var(--backdrop-color);
+  transition: opacity var(--transition-duration) var(--transition-function),
+    visibility var(--transition-duration) var(--transition-function);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/*-------  MODAL WINDOW  -------*/
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 408px;
+  min-height: 584px;
+  border-radius: 4px;
+  background-color: var(--modal-window-bg);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  transition: transform var(--transition-duration) var(--transition-function);
+}
+
+.close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  line-height: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--primary-accent-color);
+  transition: background-color var(--transition-duration)
+      var(--transition-function),
+    border-color var(--transition-duration) var(--transition-function);
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  border: none;
+  background-color: var(--active-element-color);
+}
+
+.close-btn-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: var(--modal-window-interactive-element-color);
+  transition: fill var(--transition-duration) var(--transition-function);
+}
+
+.close-btn:hover .close-btn-icon,
+.close-btn:focus .close-btn-icon {
+  fill: var(--secondary-color-white);
+}
 
 /*----------  HERO  ----------*/
 
@@ -665,70 +738,4 @@ body {
 .project-card-link:hover .overlay,
 .project-card-link:focus .overlay {
   transform: translateY(0%);
-}
-
-/*---------  BACKDROP  ---------*/
-
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity var(--transition-duration) var(--transition-function),
-    visibility var(--transition-duration) var(--transition-function);
-}
-
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-/*-------  MODAL WINDOW  -------*/
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0 auto;
-  width: 408px;
-  height: 584px;
-
-  border-radius: 4px;
-  background-color: var(--modal-window-bg);
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-}
-
-.close-btn {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  line-height: 0;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  background-color: var(--primary-accent-color);
-  transition: border-color var(--transition-duration) var(--transition-function),
-    background-color var(--transition-duration) var(--transition-function);
-}
-
-.close-btn:hover,
-.close-btn:focus {
-  border-color: transparent;
-  background-color: var(--active-element-color);
-}
-
-.close-btn-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  fill: var(--modal-window-interactive-element-color);
 }
