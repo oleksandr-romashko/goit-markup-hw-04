@@ -390,9 +390,11 @@ body {
 /*----------  HERO  ----------*/
 
 .hero {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 188px;
   padding-bottom: 188px;
-  background-color: var(--hero-bg-color);
   background-repeat: no-repeat;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -400,6 +402,8 @@ body {
     ),
     url("../images/hero/hero-bg.jpg");
   background-size: cover;
+  background-position: center;
+  background-color: var(--hero-bg-color);
 }
 
 .hero .container {
