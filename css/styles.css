@@ -188,6 +188,7 @@ body {
   height: 40px;
   border-radius: 50%;
   background-color: var(--brand-color);
+  transition: background-color var(--transition-dur-and-func);
 }
 
 .social-contact-icon {
@@ -520,8 +521,8 @@ body {
   margin-bottom: 8px;
 }
 
-.team .social-media-link:hover,
-.team .social-media-link:focus {
+.team-member-card .social-media-link:hover,
+.team-member-card .social-media-link:focus {
   background-color: var(--active-element-color);
 }
 
@@ -559,20 +560,6 @@ body {
 .client-link:focus .client-icon {
   fill: var(--active-element-color);
 }
-
-/* 
-.social-list-link {
-  display: flex; +
-  justify-content: center; +
-  align-items: center; +
-  width: 40px; +
-  height: 40px; +
-  border-radius: 10px; +
-  border: 1px solid rgba(17, 17, 17, 0.1); +
-  transition: border-color var(--transition-dur-and-func);
-}
-
- */
 
 /*----------  PORTFOLIO  -------*/
 
