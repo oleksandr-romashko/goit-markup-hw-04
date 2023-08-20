@@ -462,8 +462,8 @@ body {
   transition: fill var(--transition-duration) var(--transition-function);
 }
 
-.modal-close-btn:hover .close-btn-icon,
-.modal-close-btn:focus .close-btn-icon {
+.modal-close-btn:hover .modal-close-btn-icon,
+.modal-close-btn:focus .modal-close-btn-icon {
   fill: var(--secondary-color-white);
 }
 
