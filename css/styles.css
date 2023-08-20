@@ -284,10 +284,12 @@ body {
  */
 .menu .isCurrentPage {
   color: var(--active-element-color);
+  transition: color var(--transition-dur-and-func);
 }
 
 .menu .isCurrentPage::after {
   background-color: var(--active-element-color);
+  transition: background-color var(--transition-dur-and-func);
 }
 
 /* 
@@ -543,8 +545,7 @@ body {
   border: 1px solid var(--accent-color-grey);
   border-radius: 4px;
   outline-offset: 10px;
-  transition: fill var(--transition-dur-and-func),
-    border-color var(--transition-dur-and-func);
+  transition: border-color var(--transition-dur-and-func);
 }
 
 .client-link:hover,
@@ -582,6 +583,10 @@ body {
   border: 1px solid var(--primary-accent-color);
   background-color: var(--secondary-accent-color);
   color: var(--brand-color);
+  transition: border-color var(--transition-dur-and-func),
+    background-color var(--transition-dur-and-func),
+    color var(--transition-dur-and-func),
+    box-shadow var(--transition-dur-and-func);
 }
 
 .portfolio .filter-btn:hover,
