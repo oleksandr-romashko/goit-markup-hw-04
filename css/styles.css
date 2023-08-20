@@ -537,7 +537,7 @@ body {
 .clients-list {
   display: flex;
   justify-content: center;
-  column-gap: 24px;
+  gap: 24px;
 }
 
 .client-link {
@@ -549,7 +549,9 @@ body {
   border: 1px solid var(--accent-color-grey);
   border-radius: 4px;
   outline-offset: 10px;
-  transition: border-color var(--transition-duration) var(--transition-function);
+  color: var(--accent-color-grey);
+  transition: border-color var(--transition-duration) var(--transition-function),
+    color var(--transition-duration) var(--transition-function);
 }
 
 .client-link:hover,
@@ -558,7 +560,7 @@ body {
 }
 
 .client-icon {
-  fill: var(--accent-color-grey);
+  fill: currentColor;
   transition: fill var(--transition-duration) var(--transition-function);
 }
 
