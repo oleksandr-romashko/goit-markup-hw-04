@@ -526,11 +526,15 @@ body {
   gap: 24px;
 }
 
+.benefits-list-item {
+  width: calc((100% - 72px) / 4);
+}
+
 .benefits-icon-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-basis: calc((100% - 3 * 24px) / 4);
+  width: 100%;
   height: 112px;
   margin-bottom: 8px;
   border-radius: 4px;
